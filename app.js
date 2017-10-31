@@ -43,9 +43,9 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-app.listen(app.get('port'), function() {
-  console.log('Node app is running on port', app.get('port'));
+
+  //console.log('Node app is running on port', app.get('port'));
    console.log('http://webproject-rlebon-ryan222.c9users.io:8080')
-});
+
 
 module.exports = app;
