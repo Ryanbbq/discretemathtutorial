@@ -1,35 +1,37 @@
 <html>
   <style>
     body{
-      text-align:left;
       margin: 0 auto;
       width:960px;
       border:2px solid black;
   }
-  h4{
-    text-align:center;
+  h2{
+    font-size:30;
   }
+  ol,h4,h3{
+    font-size:25px;
+  }
+  
+
   </style>
+  
   <body>
     <h1>Section 1 - Methods of Proof and Algorithms</h1>
     <h3>(a) Make a summary of all methods of proof you learnt in this course so far. For each method highlight the advantages and disadvantages of the method and provide at least one example of proof using the method.</h3>
     
-    <p>A diret proof is a sequence of statements which are either given or deductions from previous statements, and whose last statement is the conclusion to be proved.</p>
     
-    <h4>Theorem: The sum of two integers is even<br><br>
-    1) Let x and y be some odd numbers,
-    <br> thus  x = 2r+1 for some integer r <br>
-    and y = 2t+1 for some integer t <br>
-    2) x + y = (2r+1) + (2t+1) [By substitution]
-    
-    
-    
-    </h4>
-    
-    
-    
-    
-    
+    <h2>Direct Proof</h2>
+    <h3>A direct proof is a sequence of statements which are either given or deductions from previous statements, and whose last statement is the conclusion to be proved.</h3>
+    <h4>Theorem:<br> The sum of two integers is even
+    Let x and y be some odd numbers,<br>
+    thus  x = 2r+1 for some integer r <br>
+    and y = 2t+1 for some integer t </h4>
+    <ol>
+    <li> x + y = (2r+1) + (2t+1) [By substitution]</li>
+    <li>       = 2r+2t + 1 + 1   [By removing parentheses]</li>
+    <li>       = 2(r + t + 1) [By associativity and commutatively]</li>
+    <li> Therefore x + y is even [By definition of even 2(t) for some integer t]</li>
+    </ol>
     
     <h1>Section 2 - Self-Explanation and Proof Reading</h1>
   </body>
