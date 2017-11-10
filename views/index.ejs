@@ -1,7 +1,10 @@
 <html>
-  <head><script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
-</script></head>
+  <head>
+    <!-- MATH JAX ALLOWS US TO PUT IN FORMULAS GUYS -->
+    <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+</head>
   <style>
     body{
       margin: 0 auto;
@@ -30,7 +33,7 @@
     
     <h1>Section 1 - Methods of Proof and Algorithms</h1>
     <h3>(a) Make a summary of all methods of proof you learnt in this course so far. For each method highlight the advantages and disadvantages of the method and provide at least one example of proof using the method.</h3>
-    
+    <hr>
     
     <h2>Direct Proof</h2>
     <h3>A direct proof is a sequence of statements which are either given or deductions from previous statements, and whose last statement is the conclusion to be proved.</h3>
@@ -50,16 +53,54 @@
     <h3>A proof by contradiction is a form of proof, and more specifically is a form of indirect proof, that establishes the truth or validity of a proposition. </h3>
     <h4>Theorem:<br> Give a proof by contradiction of the statement:
     "If `n^2` is an even integer then n is an even integer." </h4>
-  <ol>PROOF: suppose `n^2` is an even integer and n is not even, so that n is odd.
+    <ol>PROOF: suppose `n^2` is an even integer and n is not even, so that n is odd.
     <br> Hence ` n = 2k + 1 ` for some integer k.
     <li> `n^2 = (2k+1)^2 `</li>
     <li> `=4k^2+4k+1` </li>
     <li> `=2 * (2k^2 + 2k) + 1 `</li>
-    <li> `= 2t + 1 ` where `t = (2k^2+2k)`</li>
-  </ol>    
+    <li> `= 2t + 1 ` where `t = (2k^2+2k)` for some integer t</li>
+     Therefore this shows that `n^2` is odd, which is a contradiction to our supposition that `n^2` is even. Hence the given statement is true.
+     </ol>    
     
     
     
     <h1>Section 2 - Self-Explanation and Proof Reading</h1>
+    <h3>Theorem 4
+prove that the square root of 2 is isrational
+</h3>
+<ol>
+  PROOF:
+  
+<li>(L1) This proof uses contradiction as it is easier to work under he assumption that 2 is rational.</li>
+  <li>(L2) In order for the square root of 2 to be rational, there must be an integer 'b' that divides an integer 'a' and no other common factors besides 1.
+`sqrt(2) = a/b`</li>
+<li>(L3) A variable needs to be isolated in order for us to continue this proof approach, this is done by squaring both sides followed by dividing the whole equation variable b.
+`2b^2 = a^2`</li>
+
+
+<li>(L4) The definition of even is when a number is in the format of 2 * an integer; b and b^2 are both integers so this form holds.
+`2b^2 = even`
+since "`2b^2`" is equal to "`a^2`", and `2b^2` is even; `a^2` is also even.</li>
+
+<li>(L5) Let k be some integer, since `a^2` is even then by definition of even it will take the form "`a=2k`".</li>
+
+<li>(L6) Using substitution in the statement, "`2b^2 = a^2`", "`a^2`" will become "`(2k)^2`". 
+`2b^2 = (2k)^2`
+`2b^2 = 4k^2`
+`b^2 = 2k^2`</li>
+<li>(L7) Once again, "`2k^2`" is an even format therefore `b^2` must be even as well since they are equal. 
+let 'l' represent any integer and use the form "`b = 2l`"</li>
+<li>(L8) Both "a = 2k" and "b = 2l" have a common factor of 2 which contradicts (L2)'s statement that no other common factors beside 1 exist.
+</li>
+<li>
+(L9) Since we have found the contradiction to show the square root of 2 is not rational, it must be irrational.</li>
+
+
+</ol>
+
+
+
+
+
   </body>
 </html>
