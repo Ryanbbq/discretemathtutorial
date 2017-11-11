@@ -8,95 +8,121 @@
   <style>
     body{
       margin: 0 auto;
-      width:960px;
-      border:2px solid black;
+      width:1600px;
+
   }
   h2{
     font-size:30;
+    color:blue;
+  }
+  h1{
+    color:Blue;
   }
   ol,h4,h3{
     font-size:25px;
   }
-  
+  #formula{
+    padding:10px;
+    border:2px solid black;
+    width:350px;
+  }
 
   </style>
   
   <body>
     
-    <!-- Math Jax -->
+    <!-- Math Jax 
     <p>When `a != 0`, there are two solutions to `ax^2 + bx + c = 0` and
     they are</p>
     <p style="text-align:center">
       `x = (-b +- sqrt(b^2-4ac))/(2a) .`
     </p>
+    -->
     
     
-    <h1>Section 1 - Methods of Proof and Algorithms</h1>
-    <h3>(a) Make a summary of all methods of proof you learnt in this course so far. For each method highlight the advantages and disadvantages of the method and provide at least one example of proof using the method.</h3>
-    <hr>
-    
-    <h2>Direct Proof</h2>
-    <h3>A direct proof is a sequence of statements which are either given or deductions from previous statements, and whose last statement is the conclusion to be proved.</h3>
-    <h4>Theorem:<br> The sum of two integers is even
-    Let x and y be some odd numbers,<br>
-    thus  x = 2r+1 for some integer r <br>
-    and y = 2t+1 for some integer t </h4>
-    
-    <ol>PROOF:
-    <li> `x + y = (2r+1) + (2t+1) ` [By substitution]</li>
-    <li>     ` = 2r+2t + 1 + 1  ` [By removing parentheses]</li>
-    <li>      ` = 2(r + t + 1)` [By associativity and commutatively]</li>
-    <li> Therefore x + y is even [By definition of even 2(t) for some integer t]</li>
-    </ol>
+  <h1>Section 1 - Methods of Proof and Algorithms</h1>
+  <h3>(a) Make a summary of all methods of proofs you have learned in this course so far. For each method highlight the advantages and disadvantages of the method and provide at least one example of proof using the method.</h3>
+  <hr>
   
-    <h2>Proof by Contradiction</h2>
-    <h3>A proof by contradiction is a form of proof, and more specifically is a form of indirect proof, that establishes the truth or validity of a proposition. </h3>
-    <h4>Theorem:<br> Give a proof by contradiction of the statement:
-    "If `n^2` is an even integer then n is an even integer." </h4>
-    <ol>PROOF: suppose `n^2` is an even integer and n is not even, so that n is odd.
-    <br> Hence ` n = 2k + 1 ` for some integer k.
-    <li> `n^2 = (2k+1)^2 `</li>
-    <li> `=4k^2+4k+1` </li>
-    <li> `=2 * (2k^2 + 2k) + 1 `</li>
-    <li> `= 2t + 1 ` where `t = (2k^2+2k)` for some integer t</li>
-     Therefore this shows that `n^2` is odd, which is a contradiction to our supposition that `n^2` is even. Hence the given statement is true.
-     </ol>    
+  <h1>Definition of an Even Integer</h1>
+  <h3 id="formula">` 2*k` for some integer k</h3>
+  
+  <h1>Definition of an Odd Integer</h1>
+  <h3 id="formula">`2*k + 1` for some integer k</h3>
+  
+  <h2>Direct Proof</h2>
+  <h3>A direct proof is a sequence of statements which are either given or deductions from previous statements, and whose last statement is the conclusion to be proved.</h3>
+  <h4>Theorem:<br> The sum of two integers is even
+  Let x and y be some odd numbers,<br>
+  thus  x = 2r+1 for some integer r <br>
+  and y = 2t+1 for some integer t </h4>
+  
+  <ol>PROOF:
+  <li> `x + y = (2r+1) + (2t+1) ` [By substitution]</li>
+  <li>     ` = 2r+2t + 1 + 1  ` [By removing parentheses]</li>
+  <li>      ` = 2(r + t + 1)` [By associativity and commutatively]</li>
+  <li> Therefore x + y is even [By definition of even 2(t) for some integer t]</li>
+  </ol>
+  
+  <h2>Indirect Proof</h2>
+  <h3>A Indirect Proof is a proof of the conclusion by showing the negation of it, and showing that the negation is self contradicting </h3>
+  <h4>Theorem:<br>If `n` is an integer and `3*n` is even then `n` is even<br>
+  The contrapostive is "if n is odd then `3*n+2` is odd"<br></h4>
+  
+  <h4>An Advantage of Indirect Proofs is that it is sometimes easier to prove something is wrong with an indirect
+  proof, whereas a direct proof, you need to prove a certain statement is true, and it can be more challenging</h4>
+  <h4>A disadvantage of a Indirect Proof, would be that it relies on a contradiction, so you need to prove your 
+  assumption until you run into something that doesn't make sense, then you've found your contradiction</h4>
+  <ol>
+  <li>Let n be odd, thus `n=2*s+1` [definition of odd number]</li>
+  <li>`3*n+2=3*(2*s+1)+2`  [substitution]</li>
+  <li>  =`6*s+3+2=6*s+5`  [associative and distributive]</li>
+  <li> =`2*(3*s+2)+1`  [distributive and associative and commutative]</li>
+  <li>`3*n+2` is odd  [definition of odd]</li>
+  <li>Theorem is true since the contrapostive is true</li>
+  </ol>
+
+  <h2>Proof by Contradiction</h2>
+  <h3>A proof by contradiction is a form of proof, and more specifically is a form of indirect proof, that establishes the truth or validity of a proposition. </h3>
+  <h4>Theorem:<br> Give a proof by contradiction of the statement:
+  "If `n^2` is an even integer then n is an even integer." </h4>
+  <ol>PROOF: suppose `n^2` is an even integer and n is not even, so that n is odd.
+  <br> Hence ` n = 2k + 1 ` for some integer k.
+  <li> `n^2 = (2k+1)^2 `</li>
+  <li> `=4k^2+4k+1` </li>
+  <li> `=2 * (2k^2 + 2k) + 1 `</li>
+  <li> `= 2t + 1 ` where `t = (2k^2+2k)` for some integer t</li>
+   Therefore this shows that `n^2` is odd, which is a contradiction to our supposition that `n^2` is even. Hence the given statement is true.
+   </ol>
+  
+
     
     
-    
-    <h1>Section 2 - Self-Explanation and Proof Reading</h1>
-    <h3>Theorem 4
-prove that the square root of 2 is isrational
-</h3>
-<ol>
+  <h1>Section 2 - Self-Explanation and Proof Reading</h1>
+  <h3>Theorem 4
+  prove that the square root of 2 is irrational
+  </h3>
+  <ol>
   PROOF:
-  
-<li>(L1) This proof uses contradiction as it is easier to work under he assumption that 2 is rational.</li>
-  <li>(L2) In order for the square root of 2 to be rational, there must be an integer 'b' that divides an integer 'a' and no other common factors besides 1.
-`sqrt(2) = a/b`</li>
-<li>(L3) A variable needs to be isolated in order for us to continue this proof approach, this is done by squaring both sides followed by dividing the whole equation variable b.
-`2b^2 = a^2`</li>
-
-
-<li>(L4) The definition of even is when a number is in the format of 2 * an integer; b and b^2 are both integers so this form holds.
-`2b^2 = even`
-since "`2b^2`" is equal to "`a^2`", and `2b^2` is even; `a^2` is also even.</li>
-
-<li>(L5) Let k be some integer, since `a^2` is even then by definition of even it will take the form "`a=2k`".</li>
-
-<li>(L6) Using substitution in the statement, "`2b^2 = a^2`", "`a^2`" will become "`(2k)^2`". 
-`2b^2 = (2k)^2`
-`2b^2 = 4k^2`
-`b^2 = 2k^2`</li>
-<li>(L7) Once again, "`2k^2`" is an even format therefore `b^2` must be even as well since they are equal. 
-let 'l' represent any integer and use the form "`b = 2l`"</li>
-<li>(L8) Both "a = 2k" and "b = 2l" have a common factor of 2 which contradicts (L2)'s statement that no other common factors beside 1 exist.
-</li>
-<li>
-(L9) Since we have found the contradiction to show the square root of 2 is not rational, it must be irrational.</li>
-
-
-</ol>
+  <li> This proof uses contradiction as it is easier to work under he assumption that 2 is rational.</li>
+  <li> In order for the square root of 2 to be rational, there must be an integer 'b' that divides an integer 'a' and no other common factors besides 1.
+  `sqrt(2) = a/b`</li>
+  <li> A variable needs to be isolated in order for us to continue this proof approach, this is done by squaring both sides followed by dividing the whole equation variable b.
+  `2b^2 = a^2`</li>
+  <li> The definition of even is when a number is in the format of 2 * an integer; b and b^2 are both integers so this form holds.
+  `2b^2 = even`
+  since "`2b^2`" is equal to "`a^2`", and `2b^2` is even; `a^2` is also even.</li>
+  <li> Let k be some integer, since `a^2` is even then by definition of even it will take the form "`a=2k`".</li>
+  <li> Using substitution in the statement, "`2b^2 = a^2`", "`a^2`" will become "`(2k)^2`". 
+  `2b^2 = (2k)^2`
+  `2b^2 = 4k^2`
+  `b^2 = 2k^2`</li>
+  <li>Once again, "`2k^2`" is an even format therefore `b^2` must be even as well since they are equal. 
+  let 'l' represent any integer and use the form "`b = 2l`"</li>
+  <li> Both "a = 2k" and "b = 2l" have a common factor of 2 which contradicts (L2)'s statement that no other common factors beside 1 exist.
+  </li>
+  <li> Since we have found the contradiction to show the square root of 2 is not rational, it must be irrational.</li>
+  </ol>
 
 
 
