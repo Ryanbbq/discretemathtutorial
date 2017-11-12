@@ -6,26 +6,33 @@
     </script>
 </head>
   <style>
-    body{
-      margin: 0 auto;
-      width:1600px;
-
-  }
-  h2{
-    font-size:30;
-    color:blue;
-  }
   h1{
-    color:Blue;
+    font-size:50px;
   }
-  ol,h4,h3{
-    font-size:25px;
+  body{
+    margin: 0 auto;
+    width:1600px;
   }
   #formula{
     padding:10px;
     border:2px solid black;
     width:350px;
   }
+  #formula2{
+    padding:10px;
+    border:2px solid black;
+    width:650px;
+  }
+  li{
+    font-size:30px;
+  }
+  h2{
+    color:blue;
+  }
+  h1{
+    color:red;
+  }
+
 
   </style>
   
@@ -44,66 +51,112 @@
   <h3>(a) Make a summary of all methods of proofs you have learned in this course so far. For each method highlight the advantages and disadvantages of the method and provide at least one example of proof using the method.</h3>
   <hr>
   
-  <h1>Definition of an Even Integer</h1>
+  <h2>Definition of an Even Integer</h2>
   <h3 id="formula">` 2*k` for some integer k</h3>
   
-  <h1>Definition of an Odd Integer</h1>
+  <h2>Definition of an Odd Integer</h2>
   <h3 id="formula">`2*k + 1` for some integer k</h3>
   
+  <h2>Definition of a Prime Number</h2>
+  <h3 id="formula2">For all positive integers r and s, if `n=rs` then either `r=1` and `s=n` or `s=n` or `r=n` and `s=1`</h3>
+  
+  <h2>Definition of a Composite Number</h2>
+  <h3 id="formula2">For some positive integers `r` and `s` such that `n = r*s` and `1 < r < n` and `1 < s < n `.</h3>
+
   <h2>Direct Proof</h2>
   <h3>A direct proof is a sequence of statements which are either given or deductions from previous statements, and whose last statement is the conclusion to be proved.</h3>
   <h4>Theorem:<br> The sum of two integers is even
   Let x and y be some odd numbers,<br>
   thus  x = 2r+1 for some integer r <br>
   and y = 2t+1 for some integer t </h4>
-  
-  <ol>PROOF:
+  <h4>PROOF:</h4>
+  <ul>
   <li> `x + y = (2r+1) + (2t+1) ` [By substitution]</li>
   <li>     ` = 2r+2t + 1 + 1  ` [By removing parentheses]</li>
   <li>      ` = 2(r + t + 1)` [By associativity and commutatively]</li>
   <li> Therefore x + y is even [By definition of even 2(t) for some integer t]</li>
-  </ol>
+  </ul>
   
   <h2>Indirect Proof</h2>
   <h3>A Indirect Proof is a proof of the conclusion by showing the negation of it, and showing that the negation is self contradicting </h3>
   <h4>Theorem:<br>If `n` is an integer and `3*n` is even then `n` is even<br>
   The contrapostive is "if n is odd then `3*n+2` is odd"<br></h4>
-  
   <h4>An Advantage of Indirect Proofs is that it is sometimes easier to prove something is wrong with an indirect
   proof, whereas a direct proof, you need to prove a certain statement is true, and it can be more challenging</h4>
   <h4>A disadvantage of a Indirect Proof, would be that it relies on a contradiction, so you need to prove your 
   assumption until you run into something that doesn't make sense, then you've found your contradiction</h4>
-  <ol>
+  <ul>
   <li>Let n be odd, thus `n=2*s+1` [definition of odd number]</li>
   <li>`3*n+2=3*(2*s+1)+2`  [substitution]</li>
   <li>  =`6*s+3+2=6*s+5`  [associative and distributive]</li>
   <li> =`2*(3*s+2)+1`  [distributive and associative and commutative]</li>
   <li>`3*n+2` is odd  [definition of odd]</li>
   <li>Theorem is true since the contrapostive is true</li>
-  </ol>
+  </ul>
 
   <h2>Proof by Contradiction</h2>
   <h3>A proof by contradiction is a form of proof, and more specifically is a form of indirect proof, that establishes the truth or validity of a proposition. </h3>
   <h4>Theorem:<br> Give a proof by contradiction of the statement:
   "If `n^2` is an even integer then n is an even integer." </h4>
-  <ol>PROOF: suppose `n^2` is an even integer and n is not even, so that n is odd.
-  <br> Hence ` n = 2k + 1 ` for some integer k.
+  <h4>PROOF: suppose `n^2` is an even integer and n is not even, so that n is odd.
+   Hence ` n = 2k + 1 ` for some integer k.</h4> 
+  <ul>
   <li> `n^2 = (2k+1)^2 `</li>
   <li> `=4k^2+4k+1` </li>
   <li> `=2 * (2k^2 + 2k) + 1 `</li>
   <li> `= 2t + 1 ` where `t = (2k^2+2k)` for some integer t</li>
    Therefore this shows that `n^2` is odd, which is a contradiction to our supposition that `n^2` is even. Hence the given statement is true.
-   </ol>
+   </ul>
+   
+
+
+  <h2>Mathmatical Induction</h2>
+  <h3>Mathmatical Induction is the process of proving that if something is true in the first case, then the second 
+  case must also be true and the same goes for every other case.</h3>
+  <h3>An advantage of Mathmatical Induction is that you can see a pattern as you use it, and it is a 
+  easy way to prove that stuff about all natural numbers.</h3>
+   <h3>A disadvantage of Mathmatical Induction is that if there ins't an integer sequence then it will be hard to 
+   prove the first case, but for the most part this proof is great and has no disadvantages</h3>
+   <ul>
+  <li>For any positive integer `n>1`, : `1+2+...n=n(n+1)/2`</li>
+  <li>Base Step: Assume `n=1`, prove `p(1)` is true</li>
+  <li>`1=1(1+1)/2=`</li>
+  <li>`1=1` which shows it's true</li>
+  <li>Induction Step:</li>
+  <li>Assume `n<=k` is true</li>
+  <li>`1+2+...k=k(k+1)/2`</li>
+  <li>Show `k+1` is true</li>
+  <li>`1+2+...k + k+1=(k+1)(k+2)/2`</li>
+  <li>`k(k+1)/2 + (k+1)=(k+1)(k+2)/2`</li>
+  <li>`k^2+k+k+1/2 = k^2+3k+2/2`</li>
+  <li>`k^2+3k+2/2=`</li>
+  <li>`k=k+1`</li>
+  <li>Proven by Mathmatical Induction</li>
+  </ul>
   
+  <h2>Section 4.8 Summary</h2><ul>
+  <li>An Algorithm is a process of precise statements being executed one after another, in order. They also involve conditional statements, which can alter
+  the way a statement is executed. </li>
+  <li>An example of this is: IF(certain condition is met) then execute this(Some other statement), ELSE(otherwise) the algorithim will be executed as it was written</li>
+  <li>An example of a IF THEN algothim is:</li>
+  <li>Let's give `x` the value of 4, like this:` x=4`;</li>
+  <li>Now let's give `y` the value of `8`, like this: `y=8`;</li>
+  <li>Now let's say that IF `x` is bigger than y, then x will be assigned the number` 12`</li>
+  <li>ELSE if `x` is smaller than `y`, then y will be assigned the number `25`</li>
+  <li>Here is a view of it in a more proper way</li>
+  <li>If`(x>y)` then `x=12`, Else `y=25`</li>
+  </ul>
 
     
     
   <h1>Section 2 - Self-Explanation and Proof Reading</h1>
+  <hr>
   <h3>Theorem 4
   prove that the square root of 2 is irrational
   </h3>
+  <h4>PROOF</h4>
   <ol>
-  PROOF:
+ 
   <li> This proof uses contradiction as it is easier to work under he assumption that 2 is rational.</li>
   <li> In order for the square root of 2 to be rational, there must be an integer 'b' that divides an integer 'a' and no other common factors besides 1.
   `sqrt(2) = a/b`</li>
@@ -127,6 +180,7 @@
 
 
 
-
+<footer>&copy; Ryan Jay and Joel Project Part 2</footer>
   </body>
+  
 </html>
