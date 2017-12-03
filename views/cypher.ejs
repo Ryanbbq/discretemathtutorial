@@ -13,6 +13,57 @@
         </li>
         <li> You must submit the code for the program and an executable link so others can play with your program.</li>
         <li> A bibliography that cites any resources you used including the textbook with proper citations.</li>
+            </li>
+            
+            <div id="jay's summary block">
+                Array: a container of variable length, each value of an array is the same type of 
+                value. I.e all values are integers, all values are words, etc.
+                
+                Index: used to indicate the specific container (and it's value)
+                of an array. The first element of an array has an index of 1 (or 0 depending on
+                the standard).
+                
+                Modulus: the number left over after an interger division occurs. Divisible numbers
+                that are factors will leave a remainder of 0.
+                ex: 30 / 3 = 10 remainder 0
+                    16 / 5 = 3 remainder 1
+                
+                
+                
+            </div>
+            
+            <li> An overview of your program, the algorithms you are using and explanation of the main
+idea.
+</li>
+
+            <div id="jay's overview block">
+                A caesar cipher uses the existing letters of a language and creates an encripytion
+                by shifting the index value of the alphabet. In English, the letter 'A' would have the
+                index of 1 since it's the first letter in the alphabet. Shifting the alphabet
+                to the right 3 would make the letter 'D' have the index of 1.
+                
+                Decoding is done by shifting the index value of the alphabet in the opposite direction
+                of the encripytion shift. If the letter 'D' is index 1, shifting the alphabet left 3 
+                would return the letter 'A' to index value 1. Returning the word to a readable format.
+                
+                Mathmatically this can be noted as:
+                f(x) = (x + k) mod (a)
+                where 'x' represents the letter being encrypted
+                      'k' represents the number of letters being shifted
+                      'a' represents the length of the alphabet being used 
+                
+                So using the english letter 'A' (index 1) shifting 3 right it would look like:
+                f('A') = (1 + 3) mod (26)
+                
+                <a href="http://practicalcryptography.com/ciphers/caesar-cipher/"></a>
+                
+            </div>
+
+<li> A description of how to use the program.
+</li>
+<li> You must submit the code for the program and an executable link so others can play with
+your program.
+</li><li> A bibliography that cites any resources you used including the textbook with proper citations.</li>
         </ol>
         
         <form action="#" method="get" onsubmit="return false;">
