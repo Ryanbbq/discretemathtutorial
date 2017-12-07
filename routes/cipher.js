@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET cypher page. */
 router.get('/', function(req, res, next) {
-  res.render('cypher', { title: 'Ceasar Cypher' });
+  res.render('cipher', { title: 'Ceasar Cipher' });
 });
 
 module.exports = router;

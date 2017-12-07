@@ -6,8 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
-var users = require('./routes/users');
-var cypher = require('./routes/cypher');
+var cipher = require('./routes/cipher');
 
 var app = express();
 
@@ -24,8 +23,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/users', users);
-app.use('/cypher', cypher);
+app.use('/cipher', cipher);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -45,9 +43,12 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-
-  //console.log('Node app is running on port', app.get('port'));
-   console.log('http://discrete-project-2-jalo.c9users.io:8080')
+app.set('port', (8081));
+//console.log('Node app is running on port', app.get('port'));
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
+  console.log('https://localhost:' + app.get('port')+'/');
+});
 
 
 module.exports = app;
