@@ -16,7 +16,7 @@ your program.
 5. A bibliography that cites any resources you used including the textbook with proper citations.
 -->
         <div class="jumbotron">
-          <div class="display-3">Discrete Mathematics Project 2</div>
+          <div class="display-3">Discrete Mathematics Project Part 3</div>
         </div><center>
         <iframe width="854" height="480" src="https://www.youtube.com/embed/sMOZf4GN3oc" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></center>
             <div id="jay's summary block">
@@ -59,13 +59,7 @@ your program.
                 </h4>
                 <a href="http://practicalcryptography.com/ciphers/caesar-cipher/"></a>
             </div>
-            
-            <div id="Joels block">
-                <h1>Bibliography</h1>
-                <h4>YouTube, YouTube, www.youtube.com/embed/sMOZf4GN3oc.Copy & paste citation</h4>
-                <h4>“Crypto.” Practical Cryptography, practicalcryptography.com/ciphers/caesar-cipher/.</h4>
-                  
-            </div>
+         
       
             
             <div id="howtouseBlock">
@@ -78,7 +72,7 @@ your program.
                 </ul>
             </div>
             <div id="code">
-                <h1>Code Examples</h1>
+                <h1>Ceasars Cipher Implementation</h1>
                 <code></code>
             </div>
             
@@ -93,7 +87,7 @@ your program.
 			        }
 			    </style>
 				<td><label for="text">Text Box:</label></td>
-				<td><textarea id="text" cols="50" rows="10" style="width:40em; height:15em">GUR DHVPX OEBJA SBK WHZCRQ BIRE GUR YNML QBT.</textarea></td>
+				<td><textarea id="text" cols="50" rows="10" style="width:40em; height:15em">Gunax lbh sbe grnpuvat qvfpergr zngu!</textarea></td>
 			</tr>
 			<tr>
 				<td><label for="shift">Shift:</label></td>
@@ -135,16 +129,7 @@ your program.
         }
         
         
-        
-        /* 
-         * Returns the result of having each alphabetic letter of the given text string shifted forward
-         * by the given amount, with wraparound. Case is preserved, and non-letters are unchanged.
-         * Examples:
-         * - caesarShift("abz",  0) = "abz".
-         * - caesarShift("abz",  1) = "bca".
-         * - caesarShift("abz", 25) = "zay".
-         * - caesarShift("THe 123 !@#$", 13) = "GUr 123 !@#$".
-         */
+      
         function caesarShift(text, shift) {
         	var result = "";
         	for (var i = 0; i < text.length; i++) {
@@ -157,9 +142,89 @@ your program.
         }
 
         </script>
-      
-    
-        
+        <h4 id="codeWriting">Javascript Shift Function Example </h4>
+          <div id="codeExample">
+          <code>   
+        function shiftString(text, shift) {<br>
+        	var result = "";<br>
+        	for (var i = 0; i < text.length; i++) {<br> <p id="codeWriting"> Go through the amount of characters in the string</p> 
+        		var c = text.charCodeAt(i);<br> 
+        		if      (65 <= c && c <=  90) result += String.fromCharCode((c - 65 + shift) % 26 + 65); <br> <p id="codeWriting">Check if the characters are uppercase</p>
+        		else if (97 <= c && c <= 122) result += String.fromCharCode((c - 97 + shift) % 26 + 97); <br><p id="codeWriting">Check if the characters are lowercase</p>
+        		else                          result += text.charAt(i);  <br>
+        	}<br>
+        	return result;<Br> <p id="codeWriting"> Return the shifted string</p>
+        }<br>
+</code>
+</div>
+       <style>
+       #codeWriting{
+           color:red;
+       }
+           #codeExample{
+               width:450px;
+               height:450px;
+               padding:20px;
+               border:2px solid black;
+           }
+       </style>
+            
+            <div id="decryptedBox">
+                <h1>Decryption Message:</h1>
+                <p>Spwwz, lyo hpwnzxp ez esp xpyelw splwes szewtyp. Tq jzf lcp zmdpddtgp-nzxafwdtgp, acpdd<br>
+                1 cpaplepowj. Tq jzf lcp nz-opapyopye, awpldp ldv dzxpzyp ez acpdd 2 qzc jzf. Tq jzf slgp<br>
+                xfwetawp apcdzylwtetpd, acpdd 3, 4, 5, lyo 6. Tq jzf lcp alclyzto, hp vyzh hsz jzf lcp lyo hsle<br>
+                jzf hlye. Delj zy esp wtyp dz hp nly eclnp jzfc nlww. Tq jzf lcp opwfdtzylw, acpdd 7 lyo jzfc<br>
+                nlww htww mp eclydqpccpo ez esp xzespc dsta. Tq jzf lcp dnstkzascpytn, wtdepy nlcpqfwwj<br>
+                lyo l dxlww gztnp htww epww jzf hstns yfxmpc ez acpdd. Tq jzf lcp xlytn-opacpddtgp, te<br>
+                ozpdy?e xleepc hstns yfxmpc jzf acpdd, yz zyp htww lydhpc. Tq jzf lcp ojdwpitn, acpdd<br>
+                969696969696969. Tq jzf slgp l ypcgzfd otdzcopc, awpldp qtorpe htes esp olds vpj fyetw l<br>
+                cpacpdpyeletgp nzxpd zy esp wtyp. Tq jzf slgp lxypdtl, acpdd 8 lyo delep jzfc ylxp, loocpdd,<br>
+                aszyp yfxmpc, olep zq mtces, dzntlw dpnfctej yfxmpc, lyo jzfc xzespc?d xltopy ylxp. Tq jzf<br>
+                slgp azde-eclfxletn decpdd otdzcopc, dwzhwj lyo nlcpqfwwj acpdd 000. Tq jzf slgp mtazwlc<br>
+                otdzcopc, awpldp wplgp l xpddlrp lqepc esp mppa zc mpqzcp esp mppa. Zc lqepc esp mppa.<br>
+                Awpldp hlte qzc esp mppa. Tq jzf slgp wzh dpwq-pdeppx, awpldp slyr fa. Lww zfc zapclezcd<br>
+                lcp ezz mfdj ez elwv ez jzf. Tq jzf slgp dszce-epcx xpxzcj wzdd, acpdd 9. Tq jzf slgp dszce-epcx<br>
+                xpxzcj wzdd, acpdd 9. Tq jzf slgp dszce-epcx xpxzcj wzdd, acpdd 9. Tq jzf slgp dszce-epcx<br>
+                xpxzcj wzdd, acpdd 9?
+                </p>
+                <h1>Encrypted Message: </h1>
+                <h2>Use shift by 11</h2>
+                Hello, and welcome to the mental health hotline. If you are obsessive-compulsive, press<br>
+                1 repeatedly. If you are co-dependent, please ask someone to press 2 for you. If you have<br>
+                multiple personalities, press 3, 4, 5, and 6. If you are paranoid, we know who you are and what<br>
+                you want. Stay on the line so we can trace your call. If you are delusional, press 7 and your<br>
+                call will be transferred to the mother ship. If you are schizophrenic, listen carefully<br>
+                and a small voice will tell you which number to press. If you are manic-depressive, it<br>
+                doesn?t matter which number you press, no one will answer. If you are dyslexic, press<br>
+                969696969696969. If you have a nervous disorder, please fidget with the dash key until a<br>
+                representative comes on the line. If you have amnesia, press 8 and state your name, address,<br>
+                phone number, date of birth, social security number, and your mother?s maiden name. If you<br>
+                have post-traumatic stress disorder, slowly and carefully press 000. If you have bipolar<br>
+                disorder, please leave a message after the beep or before the beep. Or after the beep.<br>
+                Please wait for the beep. If you have low self-esteem, please hang up. All our operators<br>
+                are too busy to talk to you. If you have short-term memory loss, press 9. If you have short-term<br>
+                memory loss, press 9. If you have short-term memory loss, press 9. If you have short-term<br>
+                memory loss, press 9?
+            </div>
+            
+            
+            <div id="Joels block">
+                <h1>Bibliography</h1>
+                <p>YouTube, YouTube, www.youtube.com/embed/sMOZf4GN3oc.Copy & paste citation</p>
+                <p>“Crypto.” Practical Cryptography, practicalcryptography.com/ciphers/caesar-cipher/.</p>
+                <p>Singh, Simon (2000). The Code Book: The Science of Secrecy from Ancient Egypt to Quantum Cryptography. ISBN 0-385-49532-3.</p>
+                  
+            </div>
+        <style>
+            #h2{
+                text-color:red;
+            }
+            body{
+                margin:0 auto;
+                
+            }
+        </style>
     </body>
     
 </html>
